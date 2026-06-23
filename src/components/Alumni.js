@@ -40,7 +40,7 @@ const members = [
     name: 'Dr. Blessing Traoré',
     role: 'Public Health Advisor',
     org: 'Africa CDC',
-    country: "Côte d'Ivoire",
+    country: "C\u00f4te d\u2019Ivoire",
     quote: 'FEwB isn't just alumni networking. It is a commitment to a generation of epidemiologists who refuse to let borders define their impact.',
   },
 ];
