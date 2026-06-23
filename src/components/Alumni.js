@@ -25,7 +25,7 @@ const members = [
     role: 'FETP Coordinator',
     org: 'Kenya CDC',
     country: 'Kenya',
-    quote: 'I went from FETP resident to FETP supervisor with FEwB's support. The organisation gives you a reason to stay connected and a reason to give back.',
+    quote: "I went from FETP resident to FETP supervisor with FEwB's support. The organisation gives you a reason to stay connected and a reason to give back.",
   },
   {
     initials: 'SR',
@@ -41,7 +41,7 @@ const members = [
     role: 'Public Health Advisor',
     org: 'Africa CDC',
     country: "C\u00f4te d\u2019Ivoire",
-    quote: 'FEwB isn't just alumni networking. It is a commitment to a generation of epidemiologists who refuse to let borders define their impact.',
+    quote: "FEwB isn't just alumni networking. It is a commitment to a generation of epidemiologists who refuse to let borders define their impact.",
   },
 ];
 
