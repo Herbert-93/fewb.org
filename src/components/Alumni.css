@@ -1,0 +1,213 @@
+.alumni {
+  padding: 100px 0;
+  background: var(--warm-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.alumni::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(192, 20, 28, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.alumni__inner {
+  position: relative;
+}
+
+.alumni__header {
+  max-width: 500px;
+  margin-bottom: 48px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.alumni__header--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alumni__carousel {
+  background: #fff;
+  border: 1px solid var(--border-gray);
+  border-radius: 12px;
+  padding: 48px;
+  max-width: 800px;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s;
+}
+
+.alumni__carousel--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alumni__quote-wrap {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.alumni__quote-icon {
+  color: var(--crimson);
+  opacity: 0.2;
+  margin-bottom: 16px;
+}
+
+.alumni__quote-text {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1.8;
+  font-style: italic;
+  animation: testimonialIn 0.5s ease forwards;
+}
+
+@keyframes testimonialIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.alumni__author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-gray);
+}
+
+.alumni__avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--crimson), var(--slate-blue));
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0.04em;
+}
+
+.alumni__name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 2px;
+}
+
+.alumni__role {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.alumni__country {
+  font-size: 12px;
+  color: var(--crimson);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.alumni__controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.alumni__btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.alumni__btn:hover {
+  border-color: var(--crimson);
+  color: var(--crimson);
+  background: rgba(192, 20, 28, 0.05);
+}
+
+.alumni__dots {
+  display: flex;
+  gap: 7px;
+}
+
+.alumni__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border-gray);
+  transition: all 0.2s ease;
+}
+
+.alumni__dot--active {
+  background: var(--crimson);
+  width: 20px;
+  border-radius: 4px;
+}
+
+.alumni__map-hint {
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
+}
+
+.alumni__map-hint--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alumni__regions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.alumni__region {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--off-white);
+  border: 1px solid var(--border-gray);
+  padding: 5px 12px;
+  border-radius: 100px;
+}
+
+.alumni__region-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .alumni {
+    padding: 72px 0;
+  }
+
+  .alumni__carousel {
+    padding: 28px 20px;
+  }
+
+  .alumni__quote-text {
+    font-size: 1rem;
+  }
+}

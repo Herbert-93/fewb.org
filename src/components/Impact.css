@@ -1,0 +1,142 @@
+.impact {
+  position: relative;
+  padding: 100px 0;
+  background: linear-gradient(135deg, #1A2744 0%, #0F1B35 60%, #8B0D12 100%);
+  overflow: hidden;
+}
+
+.impact__band {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--crimson), var(--slate-blue), var(--crimson));
+}
+
+.impact__inner {
+  position: relative;
+  z-index: 2;
+}
+
+.impact__animate {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.impact__animate--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.impact__header {
+  margin-bottom: 56px;
+}
+
+.impact__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 56px;
+}
+
+.impact__card {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 36px 28px;
+  transition: background 0.2s ease;
+}
+
+.impact__card:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.impact__num {
+  display: block;
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.impact__card-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--crimson-light);
+  margin-bottom: 6px;
+}
+
+.impact__card-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.5;
+}
+
+.impact__logos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.impact__logos-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.impact__logos-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.impact__logo-badge {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 7px 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: all 0.2s ease;
+}
+
+.impact__logo-badge:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .impact {
+    padding: 72px 0;
+  }
+
+  .impact__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .impact__num {
+    font-size: 2.2rem;
+  }
+
+  .impact__card {
+    padding: 28px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .impact__grid {
+    grid-template-columns: 1fr;
+  }
+}

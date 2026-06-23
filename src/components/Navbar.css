@@ -1,0 +1,141 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 18px 0;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.navbar--scrolled {
+  background: rgba(250, 249, 247, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px 0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar__logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo-img {
+  height: 44px;
+  width: auto;
+  transition: opacity 0.2s;
+}
+
+.navbar__logo:hover .navbar__logo-img {
+  opacity: 0.85;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  margin-left: 16px;
+}
+
+.navbar__link {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--charcoal);
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+  letter-spacing: 0.01em;
+}
+
+.navbar--scrolled .navbar__link {
+  color: var(--charcoal);
+}
+
+.navbar:not(.navbar--scrolled) .navbar__link {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar__link:hover {
+  color: var(--crimson);
+  background: rgba(192, 20, 28, 0.06);
+}
+
+.navbar:not(.navbar--scrolled) .navbar__link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.navbar__cta {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.navbar__hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  color: var(--charcoal);
+  transition: background 0.15s;
+}
+
+.navbar:not(.navbar--scrolled) .navbar__hamburger {
+  color: #fff;
+}
+
+.navbar__hamburger:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.navbar__mobile {
+  display: none;
+  flex-direction: column;
+  padding: 8px 16px 16px;
+  background: var(--warm-white);
+  border-top: 1px solid var(--border-gray);
+}
+
+.navbar__mobile-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--charcoal);
+  padding: 12px 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-gray);
+  width: 100%;
+  transition: color 0.15s;
+}
+
+.navbar__mobile-link:hover {
+  color: var(--crimson);
+}
+
+@media (max-width: 900px) {
+  .navbar__links,
+  .navbar__cta {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .navbar__mobile {
+    display: flex;
+  }
+}

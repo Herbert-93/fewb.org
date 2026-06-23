@@ -1,0 +1,109 @@
+.about {
+  padding: 100px 0;
+  background: var(--warm-white);
+}
+
+.about__header {
+  max-width: 640px;
+  margin-bottom: 64px;
+}
+
+.about__animate {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.about__animate--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about__pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.about__pillar {
+  background: #fff;
+  border: 1px solid var(--border-gray);
+  border-radius: 8px;
+  padding: 28px 24px;
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.about__pillar:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+  border-color: var(--crimson);
+}
+
+.about__pillar-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(192, 20, 28, 0.08);
+  color: var(--crimson);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.about__pillar-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 10px;
+}
+
+.about__pillar-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.about__quote {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 680px;
+}
+
+.about__quote-line {
+  width: 48px;
+  height: 3px;
+  background: var(--crimson);
+  border-radius: 2px;
+}
+
+.about__quote blockquote {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--charcoal);
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.about__quote cite {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  font-style: normal;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 72px 0;
+  }
+
+  .about__pillars {
+    grid-template-columns: 1fr;
+  }
+}

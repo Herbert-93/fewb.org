@@ -1,0 +1,70 @@
+:root {
+  --crimson: #C0141C;
+  --crimson-dark: #8B0D12;
+  --crimson-light: #E8484E;
+  --navy: #1A2744;
+  --slate-blue: #2C5F8A;
+  --slate-blue-light: #4A7FAD;
+  --charcoal: #1A1A2E;
+  --warm-white: #FAF9F7;
+  --off-white: #F4F2EE;
+  --mid-gray: #9CA3AF;
+  --border-gray: #E5E2DC;
+  --text-primary: #1A1A2E;
+  --text-secondary: #4B5563;
+  --text-muted: #9CA3AF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--warm-white);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Merriweather', Georgia, serif;
+  line-height: 1.25;
+  color: var(--charcoal);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
