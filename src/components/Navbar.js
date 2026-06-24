@@ -55,7 +55,7 @@ export default function Navbar({ scrolled }) {
             rel="noopener noreferrer"
             className="btn-primary"
           >
-            Join the Network
+            Apply for deployment
           </a>
         </div>
 
