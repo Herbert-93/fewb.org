@@ -35,13 +35,13 @@ const leadership = [
   {
     name: 'Dr. Yvette Wibabara',
     role: 'Treasurer',
-    photo: '/leader-wibabara.jpg',
+    photo: '/leader-wibabara.png',
     accent: '#2C5F8A',
   },
   {
     name: 'Patricia Eyu',
     role: 'Vice Treasurer',
-    photo: '/leader-eyu.png',
+    photo: '/leader-eyu.jpg',
     accent: '#C0141C',
   },
   {
@@ -97,9 +97,15 @@ export default function Alumni() {
                   src={person.photo}
                   alt={person.name}
                   className="alumni__photo"
-                  onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
                 />
-                <div className="alumni__photo-fallback" style={{ background: `linear-gradient(135deg, ${person.accent}, #1A2744)` }}>
+                <div
+                  className="alumni__photo-fallback"
+                  style={{ background: `linear-gradient(135deg, ${person.accent}, #1A2744)` }}
+                >
                   {person.name.split(' ').map(w => w[0]).slice(0, 2).join('')}
                 </div>
               </div>
@@ -116,7 +122,8 @@ export default function Alumni() {
             <span className="section-label">Membership Benefits</span>
             <h3 className="alumni__benefits-title">Why Join FEwB?</h3>
             <p className="alumni__benefits-sub">
-              Subscription-based membership open to Uganda PHFP alumni, residents, and affiliated public health professionals.
+              Subscription-based membership open to Uganda PHFP alumni, residents,
+              and affiliated public health professionals.
             </p>
             <div className="alumni__fees">
               <div className="alumni__fee-row">
