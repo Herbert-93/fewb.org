@@ -6,6 +6,7 @@ import About from './components/About';
 import Programs from './components/Programs';
 import Impact from './components/Impact';
 import Alumni from './components/Alumni';
+import Gallery from './components/Gallery';
 import Events from './components/Events';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -18,6 +19,7 @@ function HomePage() {
       <About />
       <Impact />
       <Programs />
+      <Gallery />
       <Alumni />
       <Events />
       <Contact />
