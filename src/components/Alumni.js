@@ -27,21 +27,21 @@ const leadership = [
     accent: '#2C5F8A',
   },
   {
+    name: 'Dr. Allan Komakech',
+    role: 'Publicity Secretary',
+    photo: '/leader-komakech.png',
+    accent: '#C0141C',
+  },
+  {
     name: 'Dr. Yvette Wibabara',
     role: 'Treasurer',
-    photo: '/leader-wibabara.png',
-    accent: '#C0141C',
+    photo: '/leader-wibabara.jpg',
+    accent: '#2C5F8A',
   },
   {
     name: 'Patricia Eyu',
     role: 'Vice Treasurer',
     photo: '/leader-eyu.png',
-    accent: '#2C5F8A',
-  },
-  {
-    name: 'Dr. Allan Komakech',
-    role: 'Publicity Secretary',
-    photo: '/leader-komakech.jpg',
     accent: '#C0141C',
   },
   {
