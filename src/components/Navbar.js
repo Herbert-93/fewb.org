@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, LogIn } from 'lucide-react';
 import './Navbar.css';
 
 const navLinks = [
@@ -40,12 +40,23 @@ export default function Navbar({ scrolled }) {
         </nav>
 
         <div className="navbar__cta">
-          <button
+          <a
+            href="https://fewb-tool.onrender.com/admin/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar__login-btn"
+          >
+            <LogIn size={14} />
+            Login
+          </a>
+          <a
+            href="https://fewb-tool.onrender.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary"
-            onClick={() => handleNavClick('#contact')}
           >
             Join the Network
-          </button>
+          </a>
         </div>
 
         <button
@@ -68,13 +79,25 @@ export default function Navbar({ scrolled }) {
               {link.label}
             </button>
           ))}
-          <button
-            className="btn-primary"
-            style={{ margin: '12px 0', width: '100%', justifyContent: 'center' }}
-            onClick={() => handleNavClick('#contact')}
-          >
-            Join the Network
-          </button>
+          <div className="navbar__mobile-buttons">
+            <a
+              href="https://fewb-tool.onrender.com/admin/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="navbar__login-btn navbar__login-btn--mobile"
+            >
+              <LogIn size={14} />
+              Login
+            </a>
+            <a
+              href="https://fewb-tool.onrender.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary navbar__mobile-join"
+            >
+              Join the Network
+            </a>
+          </div>
         </div>
       )}
     </header>
