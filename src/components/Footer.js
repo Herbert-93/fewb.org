@@ -3,10 +3,10 @@ import { Globe, ArrowUp } from 'lucide-react';
 import './Footer.css';
 
 const footerLinks = {
-  Organisation: ['About FEwB', 'Our Mission', 'Governance', 'Partners', 'Annual Reports'],
-  Network: ['Alumni Directory', 'Mentorship', 'Working Groups', 'Join Us'],
-  Resources: ['Field Library', 'Publications', 'Tools & Guides', 'Outbreak Archive'],
-  Connect: ['Events', 'Webinars', 'Newsletter', 'Contact Us'],
+  Organisation: ['About FEwB', 'Our Mission', 'Strategic Plan', 'Partners', 'Constitution'],
+  Network: ['Alumni Directory', 'Membership', 'Executive Committee', 'Join Us'],
+  Activities: ['Outbreak Response', 'Surveillance', 'Capacity Building', 'GHS Support', 'Research'],
+  Connect: ['Contact Us', 'UNIPH Website', 'AFENET', 'Uganda Ministry of Health'],
 };
 
 export default function Footer() {
@@ -19,11 +19,12 @@ export default function Footer() {
           <div className="footer__brand">
             <img src="/logo.png" alt="FEwB" className="footer__logo" />
             <p className="footer__tagline">
-              Connecting field epidemiologists across borders to protect the world's health.
+              Advancing quality field epidemiology through practice, research, capacity building,
+              and health program development.
             </p>
             <div className="footer__badge">
               <Globe size={12} />
-              <span>Global · Non-Profit · Alumni-Led</span>
+              <span>Non-Profit · Alumni-Led · Est. 2016 · Kampala, Uganda</span>
             </div>
           </div>
 
@@ -43,11 +44,11 @@ export default function Footer() {
 
         <div className="footer__bottom">
           <p className="footer__copy">
-            © {new Date().getFullYear()} Field Epidemiologists without Borders (FEwB). All rights reserved.
+            &copy; {new Date().getFullYear()} Field Epidemiologists without Borders (FEwB).
+            Housed under the Uganda National Institute of Public Health (UNIPH). All rights reserved.
           </p>
           <div className="footer__bottom-links">
             <a href="#" className="footer__link footer__link--small">Privacy Policy</a>
-            <a href="#" className="footer__link footer__link--small">Terms of Use</a>
             <button className="footer__top-btn" onClick={scrollToTop} aria-label="Back to top">
               <ArrowUp size={15} />
               Back to top

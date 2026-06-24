@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Mail, Send, CheckCircle } from 'lucide-react';
+import { Mail, Send, CheckCircle, MapPin, Globe } from 'lucide-react';
 import './Contact.css';
 
 export default function Contact() {
@@ -43,20 +43,41 @@ export default function Contact() {
               Join the network.<br />Make your mark.
             </h2>
             <p className="section-subtitle" style={{ color: 'rgba(255,255,255,0.65)', maxWidth: '420px' }}>
-              Whether you are an FETP graduate, a current resident, or a public health partner —
-              there is a place for you in FEwB. Reach out and we will connect you with the right people.
+              Whether you are a Uganda PHFP graduate, a current resident, a partner organisation,
+              or a national health authority seeking epidemiologic support — reach out and we will
+              connect you with the right people.
             </p>
           </div>
 
           <div className="contact__info contact__animate">
-            <a href="mailto:info@fewb.org" className="contact__email">
-              <Mail size={16} />
-              info@fewb.org
+            <div className="contact__info-item">
+              <MapPin size={15} />
+              <span>Kampala, Uganda — Housed under UNIPH</span>
+            </div>
+            <a
+              href="https://uniph.go.ug/field-epidemiologists-without-borders-fewb"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact__info-item contact__email"
+            >
+              <Globe size={15} />
+              uniph.go.ug/fewb
             </a>
             <div className="contact__social">
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="contact__social-link">X / Twitter</a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="contact__social-link">LinkedIn</a>
-              <a href="https://researchgate.net" target="_blank" rel="noopener noreferrer" className="contact__social-link">ResearchGate</a>
+            </div>
+          </div>
+
+          <div className="contact__membership contact__animate">
+            <div className="contact__mem-title">Membership Fees</div>
+            <div className="contact__mem-row">
+              <span>One-time registration</span>
+              <span>UgX 100,000</span>
+            </div>
+            <div className="contact__mem-row">
+              <span>Annual subscription</span>
+              <span>UgX 100,000</span>
             </div>
           </div>
         </div>
@@ -66,7 +87,7 @@ export default function Contact() {
             <div className="contact__success">
               <CheckCircle size={44} className="contact__success-icon" />
               <h3>Message received!</h3>
-              <p>Thank you for reaching out. A member of the FEwB team will be in touch within 2–3 business days.</p>
+              <p>Thank you for reaching out to FEwB. A member of the executive committee will be in touch within 2–3 business days.</p>
             </div>
           ) : (
             <form className="contact__form" onSubmit={handleSubmit}>
@@ -98,7 +119,7 @@ export default function Contact() {
               </div>
 
               <div className="contact__field">
-                <label htmlFor="role">Your Role</label>
+                <label htmlFor="role">Your Background</label>
                 <select
                   id="role"
                   name="role"
@@ -107,11 +128,12 @@ export default function Contact() {
                   required
                 >
                   <option value="">Select your background</option>
-                  <option value="fetp-grad">FETP Graduate</option>
-                  <option value="fetp-resident">FETP Resident</option>
+                  <option value="phfp-alumni">Uganda PHFP Alumni</option>
+                  <option value="phfp-resident">Uganda PHFP Resident</option>
+                  <option value="fetp-other">FETP Graduate (Other Country)</option>
                   <option value="public-health">Public Health Professional</option>
-                  <option value="researcher">Researcher / Academic</option>
-                  <option value="partner">Institutional Partner</option>
+                  <option value="partner-org">Partner / Donor Organisation</option>
+                  <option value="national-authority">National Health Authority</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -122,7 +144,7 @@ export default function Contact() {
                   id="message"
                   name="message"
                   rows={5}
-                  placeholder="Tell us a little about yourself and how you'd like to connect with FEwB..."
+                  placeholder="Tell us about yourself and how you would like to engage with FEwB..."
                   value={form.message}
                   onChange={handleChange}
                   required

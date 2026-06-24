@@ -5,34 +5,34 @@ import './Programs.css';
 const programs = [
   {
     icon: Network,
-    tag: 'Core Program',
-    title: 'Alumni Mentorship Network',
-    desc: 'Structured mentorship pairing seasoned field epidemiologists with early-career alumni. Monthly sessions, tailored guidance, and long-term professional relationships.',
-    highlights: ['Quarterly cohorts', '1-on-1 pairing', 'Cross-country connections'],
+    tag: 'Core Activity',
+    title: 'Epidemic Response & Outbreak Investigation',
+    desc: 'We deploy rapid response teams to investigate disease outbreaks, identify causative agents, determine modes of transmission, characterize affected populations, and recommend evidence-based control measures including active case finding and contact tracing.',
+    highlights: ['Rapid deployment teams', 'Active case finding', 'Contact tracing', 'Risk communication'],
     color: 'crimson',
   },
   {
     icon: BookOpen,
-    tag: 'Knowledge Hub',
-    title: 'Field Intelligence Library',
-    desc: 'A curated repository of outbreak reports, field guides, SOPs, and original research authored by FEwB alumni — freely accessible to all members.',
-    highlights: ['300+ documents', 'Peer-reviewed content', 'Open access'],
+    tag: 'Surveillance',
+    title: 'Disease Surveillance & Early Warning',
+    desc: 'We assist in establishing, strengthening, and optimizing disease surveillance systems — including sentinel surveillance, event-based surveillance, and Integrated Disease Surveillance and Response (IDSR) frameworks — for early detection of public health threats.',
+    highlights: ['Sentinel surveillance', 'Event-based surveillance', 'IDSR frameworks', 'Data quality improvement'],
     color: 'blue',
-  },
-  {
-    icon: Mic,
-    tag: 'Events',
-    title: 'Webinar & Conference Series',
-    desc: 'Monthly online seminars featuring expert alumni. Annual in-person symposium bringing the global network together for learning and advocacy.',
-    highlights: ['Monthly webinars', 'Annual symposium', 'CME credits'],
-    color: 'crimson',
   },
   {
     icon: GraduationCap,
     tag: 'Capacity Building',
-    title: 'FETP Strengthening Initiative',
-    desc: 'Alumni contribute back to training programmes as supervisors, facilitators, and advisors — ensuring the next generation of field epidemiologists is world-class.',
-    highlights: ['Curriculum support', 'Supervisory roles', 'Scholarship fund'],
+    title: 'Training & Mentorship',
+    desc: 'A cornerstone of our mission is empowering local health workforces. We provide hands-on training, mentorship, and workshops in core epidemiological competencies, outbreak investigation, surveillance, data analysis, and health communication.',
+    highlights: ['On-the-job training', 'Mentorship programs', 'Workshop facilitation', 'Skills transfer'],
+    color: 'crimson',
+  },
+  {
+    icon: Mic,
+    tag: 'Global Health Security',
+    title: 'GHS & Emergency Preparedness',
+    desc: 'We support countries in developing emergency preparedness and response plans, conducting simulations, and building capacity for effective response coordination. We assist with Joint External Evaluations (JEEs), After Action Reviews (AARs), and Joint Action Planning (JAP).',
+    highlights: ['JEE support', 'After Action Reviews', 'IHR core capacities', 'Simulation exercises'],
     color: 'blue',
   },
 ];
@@ -62,10 +62,10 @@ export default function Programs() {
       <div className="container">
         <div className="programs__header prog__animate">
           <span className="section-label">What We Do</span>
-          <h2 className="section-title">Programs & Initiatives</h2>
+          <h2 className="section-title">Programs & Activities</h2>
           <p className="section-subtitle">
-            FEwB programmes are built around three principles: connect alumni,
-            sustain excellence, and amplify public health impact.
+            FEwB provides critical epidemiologic support and technical assistance across
+            a spectrum of public health needs, particularly in underserved and crisis-affected areas.
           </p>
         </div>
 

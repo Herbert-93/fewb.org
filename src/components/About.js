@@ -5,23 +5,23 @@ import './About.css';
 const pillars = [
   {
     icon: Shield,
-    title: 'Public Health Leadership',
-    desc: 'Equipping alumni with tools and networks to lead disease surveillance, outbreak investigation, and emergency response at national and international levels.',
+    title: 'Epidemic Response & Outbreak Investigation',
+    desc: 'We deploy rapid response teams to investigate disease outbreaks, identify causative agents, determine modes of transmission, and recommend evidence-based control measures including contact tracing and risk communication.',
   },
   {
     icon: Users,
-    title: 'Global Community',
-    desc: 'Connecting field epidemiologists across continents — fostering mentorship, collaboration, and peer support across career stages.',
+    title: 'Capacity Building & Training',
+    desc: 'A cornerstone of our mission is empowering local health workforces. We provide hands-on training, mentorship, and workshops in core epidemiological competencies, outbreak investigation, surveillance, and data analysis.',
   },
   {
     icon: BookOpen,
-    title: 'Knowledge Exchange',
-    desc: 'Sharing lessons from the field through case studies, publications, webinars, and joint research across health systems.',
+    title: 'Disease Surveillance & Early Warning',
+    desc: 'We assist in establishing and strengthening disease surveillance systems including sentinel, event-based, and integrated disease surveillance and response (IDSR) frameworks for early detection of public health threats.',
   },
   {
     icon: Zap,
-    title: 'Rapid Response',
-    desc: 'Mobilising alumni expertise during public health emergencies, supporting local and global outbreak responses with evidence-based action.',
+    title: 'Global Health Security Support',
+    desc: 'We contribute to strengthening GHS capacities by assisting in Joint External Evaluations (JEEs), After Action Reviews (AARs), and Joint Action Planning (JAP) processes, helping countries meet IHR core capacities.',
   },
 ];
 
@@ -50,12 +50,13 @@ export default function About() {
       <div className="container">
         <div className="about__header about__animate">
           <span className="section-label">Who We Are</span>
-          <h2 className="section-title">Born in the field.<br />Built for the world.</h2>
+          <h2 className="section-title">Born in Uganda.<br />Built for the world.</h2>
           <p className="section-subtitle">
-            Field Epidemiologists without Borders (FEwB) is an alumni organisation
-            uniting graduates of Field Epidemiology Training Programmes (FETPs) from
-            across Africa, Asia, and beyond. We exist to sustain and multiply the
-            impact of trained field epidemiologists after they leave formal programmes.
+            Field Epidemiologists without Borders (FEwB) is a non-governmental, non-profit
+            organisation comprised of alumni and fellows of the Uganda Public Health Fellowship
+            Program (PHFP). Established in 2016 and housed under the Uganda National Institute
+            of Public Health (UNIPH), FEwB serves as a rapid response mechanism deploying
+            skilled epidemiologists to regions grappling with epidemics and public health emergencies.
           </p>
         </div>
 
@@ -77,10 +78,9 @@ export default function About() {
         <div className="about__quote about__animate">
           <div className="about__quote-line" />
           <blockquote>
-            "Public health is not just a science — it is a calling. FEwB exists
-            so that call is never answered alone."
+            "Communities empowered to prevent, detect and respond to public health threats."
           </blockquote>
-          <cite>— FEwB Founding Charter</cite>
+          <cite>— FEwB Vision Statement</cite>
         </div>
       </div>
     </section>

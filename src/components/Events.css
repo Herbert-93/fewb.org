@@ -157,3 +157,43 @@
     margin-top: 0;
   }
 }
+
+.events__capacities {
+  margin-top: 48px;
+  background: #fff;
+  border: 1px solid var(--border-gray);
+  border-radius: 10px;
+  padding: 32px;
+}
+
+.events__cap-title {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 20px;
+}
+
+.events__cap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.events__cap-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.events__cap-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--slate-blue);
+  flex-shrink: 0;
+  margin-top: 6px;
+}

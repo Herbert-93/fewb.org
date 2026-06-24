@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Impact.css';
 
 const stats = [
-  { value: 500, suffix: '+', label: 'Alumni Network', desc: 'Active professionals worldwide' },
-  { value: 45, suffix: '+', label: 'Countries', desc: 'Represented across the globe' },
-  { value: 120, suffix: '+', label: 'Outbreak Responses', desc: 'Contributed by alumni' },
-  { value: 18, suffix: '', label: 'Partner Institutions', desc: 'WHO, CDC, AFRICA CDC & more' },
+  { value: 115, suffix: '', label: 'Alumni Members', desc: 'Trained field epidemiologists' },
+  { value: 37, suffix: '', label: 'Active Residents', desc: 'FETP / LLP / Health Informatics' },
+  { value: 3, suffix: '', label: 'Grants Awarded', desc: 'COVID-19, outbreak timeliness & mortality surveillance' },
+  { value: 2016, suffix: '', label: 'Established', desc: 'Housed under UNIPH, Kampala' },
 ];
 
 function Counter({ value, suffix, active }) {
@@ -78,9 +78,9 @@ export default function Impact() {
         </div>
 
         <div className="impact__logos impact__animate">
-          <p className="impact__logos-label">In partnership with</p>
+          <p className="impact__logos-label">Funding & collaboration partners</p>
           <div className="impact__logos-row">
-            {['WHO', 'Africa CDC', 'US CDC', 'ECDC', 'MSF', 'GOARN'].map((org) => (
+            {['UNIPH / PHFP', 'Ministry of Health', 'AFENET', 'MakSPH', 'US CDC', 'WHO', 'Resolve to Save Lives', 'KOFIH'].map((org) => (
               <span key={org} className="impact__logo-badge">{org}</span>
             ))}
           </div>

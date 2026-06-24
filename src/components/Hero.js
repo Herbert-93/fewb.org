@@ -44,18 +44,18 @@ export default function Hero() {
       <div className="container hero__content">
         <div className="hero__badge">
           <Globe size={13} />
-          <span>Alumni Network · Est. 2016</span>
+          <span>Uganda Public Health Fellowship Program Alumni · Est. 2016</span>
         </div>
 
         <h1 className="hero__title">
-          Epidemiologists<br />
+          Field Epidemiologists<br />
           <span className="hero__title-accent">without Borders.</span>
         </h1>
 
         <p className="hero__subtitle">
-          A global alumni community of field epidemiologists committed to
-          strengthening public health systems, sharing knowledge, and responding
-          to outbreaks wherever they strike.
+          A non-profit network of Uganda PHFP alumni and fellows dedicated to advancing
+          quality field epidemiology through practice, research, capacity building,
+          and health program development — wherever the need arises.
         </p>
 
         <div className="hero__actions">
@@ -75,18 +75,23 @@ export default function Hero() {
 
         <div className="hero__stats">
           <div className="hero__stat">
-            <span className="hero__stat-num">500+</span>
-            <span className="hero__stat-label">Alumni Worldwide</span>
+            <span className="hero__stat-num">115</span>
+            <span className="hero__stat-label">Alumni Members</span>
           </div>
           <div className="hero__stat-divider" />
           <div className="hero__stat">
-            <span className="hero__stat-num">45+</span>
-            <span className="hero__stat-label">Countries Represented</span>
+            <span className="hero__stat-num">37</span>
+            <span className="hero__stat-label">Active Residents</span>
           </div>
           <div className="hero__stat-divider" />
           <div className="hero__stat">
-            <span className="hero__stat-num">120+</span>
-            <span className="hero__stat-label">Outbreak Responses</span>
+            <span className="hero__stat-num">3</span>
+            <span className="hero__stat-label">Grants Awarded</span>
+          </div>
+          <div className="hero__stat-divider" />
+          <div className="hero__stat">
+            <span className="hero__stat-num">2016</span>
+            <span className="hero__stat-label">Year Established</span>
           </div>
         </div>
       </div>
