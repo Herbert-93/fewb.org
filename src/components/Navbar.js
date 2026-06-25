@@ -55,7 +55,7 @@ export default function Navbar({ scrolled }) {
             rel="noopener noreferrer"
             className="btn-primary"
           >
-            Apply for deployment
+            Fill Questionare
           </a>
         </div>
 
