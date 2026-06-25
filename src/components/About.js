@@ -3,26 +3,10 @@ import { Shield, Users, BookOpen, Zap } from 'lucide-react';
 import './About.css';
 
 const pillars = [
-  {
-    icon: Shield,
-    title: 'Epidemic Response & Outbreak Investigation',
-    desc: 'We deploy rapid response teams to investigate disease outbreaks, identify causative agents, determine modes of transmission, and recommend evidence-based control measures including contact tracing and risk communication.',
-  },
-  {
-    icon: Users,
-    title: 'Capacity Building & Training',
-    desc: 'A cornerstone of our mission is empowering local health workforces. We provide hands-on training, mentorship, and workshops in core epidemiological competencies, outbreak investigation, surveillance, and data analysis.',
-  },
-  {
-    icon: BookOpen,
-    title: 'Disease Surveillance & Early Warning',
-    desc: 'We assist in establishing and strengthening disease surveillance systems including sentinel, event-based, and integrated disease surveillance and response (IDSR) frameworks for early detection of public health threats.',
-  },
-  {
-    icon: Zap,
-    title: 'Global Health Security Support',
-    desc: 'We contribute to strengthening GHS capacities by assisting in Joint External Evaluations (JEEs), After Action Reviews (AARs), and Joint Action Planning (JAP) processes, helping countries meet IHR core capacities.',
-  },
+  { icon: Shield,   title: 'Epidemic Response & Outbreak Investigation', desc: 'We deploy rapid response teams to investigate disease outbreaks, identify causative agents, determine modes of transmission, and recommend evidence-based control measures.' },
+  { icon: Users,    title: 'Capacity Building & Training',               desc: 'A cornerstone of our mission is empowering local health workforces with hands-on training, mentorship, and workshops in core epidemiological competencies.' },
+  { icon: BookOpen, title: 'Disease Surveillance & Early Warning',       desc: 'We assist in establishing and strengthening surveillance systems including sentinel, event-based, and IDSR frameworks for early detection of public health threats.' },
+  { icon: Zap,      title: 'Global Health Security Support',             desc: 'We contribute to strengthening GHS capacities by assisting in Joint External Evaluations, After Action Reviews, and Joint Action Planning processes.' },
 ];
 
 export default function About() {
@@ -39,7 +23,7 @@ export default function About() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.08 }
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
@@ -48,18 +32,43 @@ export default function About() {
   return (
     <section id="about" className="about" ref={sectionRef}>
       <div className="container">
-        <div className="about__header about__animate">
-          <span className="section-label">Who We Are</span>
-          <h2 className="section-title">Born in Uganda.<br />Built for the world.</h2>
-          <p className="section-subtitle">
-            Field Epidemiologists without Borders (FEwB) is a non-governmental, non-profit
-            organisation comprised of alumni and fellows of the Uganda Public Health Fellowship
-            Program (PHFP). Established in 2016 and housed under the Uganda National Institute
-            of Public Health (UNIPH), FEwB serves as a rapid response mechanism deploying
-            skilled epidemiologists to regions grappling with epidemics and public health emergencies.
-          </p>
+
+        {/* Two-col intro with image */}
+        <div className="about__intro">
+          <div className="about__intro-text about__animate">
+            <span className="section-label">Who We Are</span>
+            <h2 className="section-title">Born in Uganda.<br />Built for the world.</h2>
+            <p className="section-subtitle">
+              Field Epidemiologists without Borders (FEwB) is a non-governmental, non-profit
+              organisation comprised of alumni and fellows of the Uganda Public Health Fellowship
+              Program (PHFP). Established in 2016 and housed under the Uganda National Institute
+              of Public Health (UNIPH), FEwB deploys skilled epidemiologists to regions grappling
+              with epidemics and public health emergencies.
+            </p>
+            <div className="about__quote">
+              <div className="about__quote-line" />
+              <blockquote>"Communities empowered to prevent, detect and respond to public health threats."</blockquote>
+              <cite>— FEwB Vision Statement</cite>
+            </div>
+          </div>
+
+          <div className="about__intro-visual about__animate">
+            <div className="about__img-stack">
+              <div className="about__img-card about__img-card--back">
+                <img src="/field-flood.png" alt="Field investigation" />
+              </div>
+              <div className="about__img-card about__img-card--front">
+                <img src="/field-training.png" alt="Capacity building training" />
+              </div>
+              <div className="about__img-badge">
+                <span className="about__img-badge-num">2016</span>
+                <span className="about__img-badge-label">Est.</span>
+              </div>
+            </div>
+          </div>
         </div>
 
+        {/* Pillars */}
         <div className="about__pillars">
           {pillars.map((pillar, i) => {
             const Icon = pillar.icon;
@@ -75,13 +84,6 @@ export default function About() {
           })}
         </div>
 
-        <div className="about__quote about__animate">
-          <div className="about__quote-line" />
-          <blockquote>
-            "Communities empowered to prevent, detect and respond to public health threats."
-          </blockquote>
-          <cite>— FEwB Vision Statement</cite>
-        </div>
       </div>
     </section>
   );

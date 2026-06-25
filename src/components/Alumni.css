@@ -8,17 +8,18 @@
 .alumni::before {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 480px;
-  height: 480px;
+  top: -100px;
+  right: -150px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(192, 20, 28, 0.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(192,20,28,0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 
 .alumni__inner { position: relative; }
 
+/* Header */
 .alumni__header {
   max-width: 640px;
   margin-bottom: 48px;
@@ -26,11 +27,7 @@
   transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
-
-.alumni__header--in {
-  opacity: 1;
-  transform: translateY(0);
-}
+.alumni__header--in { opacity: 1; transform: translateY(0); }
 
 /* Leadership grid */
 .alumni__leadership {
@@ -38,14 +35,6 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin-bottom: 64px;
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s;
-}
-
-.alumni__leadership--in {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .alumni__leader {
@@ -53,21 +42,29 @@
   border: 1px solid var(--border-gray);
   border-radius: 12px;
   overflow: hidden;
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
-  border-top: 3px solid var(--accent);
+  border-top: 3px solid var(--accent, #C0141C);
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.55s ease var(--delay, 0s),
+              transform 0.55s ease var(--delay, 0s),
+              box-shadow 0.25s ease,
+              border-top-color 0.25s ease;
+  cursor: default;
 }
+.alumni__leader--in { opacity: 1; transform: translateY(0); }
 
 .alumni__leader:hover {
-  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.1);
-  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+  transform: translateY(-5px) !important;
 }
 
+/* Photo */
 .alumni__photo-wrap {
   position: relative;
   width: 100%;
-  padding-top: 100%;
+  padding-top: 105%;
   overflow: hidden;
-  background: var(--off-white);
+  background: #f0f0f0;
 }
 
 .alumni__photo {
@@ -78,6 +75,11 @@
   object-fit: cover;
   object-position: center top;
   display: block;
+  transition: transform 0.4s ease;
+}
+
+.alumni__leader:hover .alumni__photo {
+  transform: scale(1.04);
 }
 
 .alumni__photo-fallback {
@@ -86,12 +88,13 @@
   display: none;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: 0.04em;
 }
 
+/* Info */
 .alumni__leader-info {
   padding: 14px 16px 18px;
 }
@@ -106,7 +109,7 @@
 
 .alumni__role-tag {
   font-size: 11.5px;
-  color: var(--accent);
+  color: var(--accent, #C0141C);
   font-weight: 600;
   letter-spacing: 0.03em;
 }
@@ -123,13 +126,9 @@
   align-items: start;
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
+  transition: opacity 0.6s ease 0.5s, transform 0.6s ease 0.5s;
 }
-
-.alumni__benefits--in {
-  opacity: 1;
-  transform: translateY(0);
-}
+.alumni__benefits--in { opacity: 1; transform: translateY(0); }
 
 .alumni__benefits-title {
   font-family: 'Merriweather', Georgia, serif;
@@ -161,13 +160,8 @@
   color: var(--text-secondary);
   border-bottom: 1px solid var(--border-gray);
 }
-
 .alumni__fee-row:last-child { border-bottom: none; }
-
-.alumni__fee-row span:last-child {
-  font-weight: 700;
-  color: var(--charcoal);
-}
+.alumni__fee-row span:last-child { font-weight: 700; color: var(--charcoal); }
 
 .alumni__benefits-list {
   list-style: none;
@@ -195,20 +189,17 @@
   margin-top: 7px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
   .alumni__leadership { grid-template-columns: repeat(4, 1fr); }
 }
-
 @media (max-width: 900px) {
   .alumni__leadership { grid-template-columns: repeat(2, 1fr); }
   .alumni__benefits { grid-template-columns: 1fr; gap: 32px; }
 }
-
 @media (max-width: 768px) {
   .alumni { padding: 72px 0; }
   .alumni__benefits { padding: 24px; }
 }
-
 @media (max-width: 480px) {
   .alumni__leadership { grid-template-columns: repeat(2, 1fr); gap: 12px; }
 }

@@ -2,54 +2,14 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Alumni.css';
 
 const leadership = [
-  {
-    name: 'Dr. Nsereko Godfrey',
-    role: 'President',
-    photo: '/leader-nsereko.png',
-    accent: '#C0141C',
-  },
-  {
-    name: 'Dr. Alex Ndyabakira',
-    role: 'Vice President',
-    photo: '/leader-ndyabakira.png',
-    accent: '#2C5F8A',
-  },
-  {
-    name: 'Dr. Irene Kyamwine',
-    role: 'General Secretary',
-    photo: '/leader-kyamwine.png',
-    accent: '#C0141C',
-  },
-  {
-    name: 'Dr. Benigna Namara',
-    role: 'Vice General Secretary',
-    photo: '/leader-namara.png',
-    accent: '#2C5F8A',
-  },
-  {
-    name: 'Dr. Allan Komakech',
-    role: 'Publicity Secretary',
-    photo: '/leader-komakech.png',
-    accent: '#C0141C',
-  },
-  {
-    name: 'Dr. Yvette Wibabara',
-    role: 'Treasurer',
-    photo: '/leader-wibabara.png',
-    accent: '#2C5F8A',
-  },
-  {
-    name: 'Patricia Eyu',
-    role: 'Vice Treasurer',
-    photo: '/leader-eyu.jpg',
-    accent: '#C0141C',
-  },
-  {
-    name: 'Dr. Steven Kabwama',
-    role: 'Ex-officio',
-    photo: '/leader-kabwama.png',
-    accent: '#2C5F8A',
-  },
+  { name: 'Dr. Nsereko Godfrey',  role: 'President',             photo: '/leader-nsereko.png',   accent: '#C0141C' },
+  { name: 'Dr. Alex Ndyabakira', role: 'Vice President',         photo: '/leader-ndyabakira.png',accent: '#2C5F8A' },
+  { name: 'Dr. Irene Kyamwine',  role: 'General Secretary',      photo: '/leader-kyamwine.png',  accent: '#C0141C' },
+  { name: 'Dr. Benigna Namara',  role: 'Vice General Secretary', photo: '/leader-namara.png',    accent: '#2C5F8A' },
+  { name: 'Dr. Allan Komakech',  role: 'Publicity Secretary',    photo: '/leader-komakech.png',  accent: '#C0141C' },
+  { name: 'Dr. Yvette Wibabara', role: 'Treasurer',              photo: '/leader-wibabara.png',  accent: '#2C5F8A' },
+  { name: 'Patricia Eyu',        role: 'Vice Treasurer',         photo: '/leader-eyu.png',       accent: '#C0141C' },
+  { name: 'Dr. Steven Kabwama',  role: 'Ex-officio',             photo: '/leader-kabwama.png',   accent: '#2C5F8A' },
 ];
 
 const benefits = [
@@ -67,10 +27,8 @@ export default function Alumni() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) setVisible(true);
-      },
-      { threshold: 0.1 }
+      (entries) => { if (entries[0].isIntersecting) setVisible(true); },
+      { threshold: 0.05 }
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
@@ -89,9 +47,13 @@ export default function Alumni() {
           </p>
         </div>
 
-        <div className={`alumni__leadership ${visible ? 'alumni__leadership--in' : ''}`}>
+        <div className="alumni__leadership">
           {leadership.map((person, i) => (
-            <div className="alumni__leader" key={i} style={{ '--accent': person.accent }}>
+            <div
+              className={`alumni__leader ${visible ? 'alumni__leader--in' : ''}`}
+              key={i}
+              style={{ '--accent': person.accent, '--delay': `${i * 0.07}s` }}
+            >
               <div className="alumni__photo-wrap">
                 <img
                   src={person.photo}
@@ -106,7 +68,7 @@ export default function Alumni() {
                   className="alumni__photo-fallback"
                   style={{ background: `linear-gradient(135deg, ${person.accent}, #1A2744)` }}
                 >
-                  {person.name.split(' ').map(w => w[0]).slice(0, 2).join('')}
+                  {person.name.replace('Dr. ','').split(' ').map(w => w[0]).slice(0,2).join('')}
                 </div>
               </div>
               <div className="alumni__leader-info">
