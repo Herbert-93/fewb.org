@@ -26,12 +26,6 @@ const photos = [
     tag: 'Field Investigation',
     wide: false,
   },
-  {
-    src: '/field-award.png',
-    caption: 'FEwB Outstanding Quality Improvement Award 2026',
-    tag: 'Recognition',
-    wide: true,
-  },
 ];
 
 export default function Gallery() {

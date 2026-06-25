@@ -68,18 +68,6 @@ export default function Contact() {
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="contact__social-link">LinkedIn</a>
             </div>
           </div>
-
-          <div className="contact__membership contact__animate">
-            <div className="contact__mem-title">Membership Fees</div>
-            <div className="contact__mem-row">
-              <span>One-time registration</span>
-              <span>UgX 100,000</span>
-            </div>
-            <div className="contact__mem-row">
-              <span>Annual subscription</span>
-              <span>UgX 100,000</span>
-            </div>
-          </div>
         </div>
 
         <div className="contact__right contact__animate">
