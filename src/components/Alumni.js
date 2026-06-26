@@ -84,19 +84,9 @@ export default function Alumni() {
             <span className="section-label">Membership Benefits</span>
             <h3 className="alumni__benefits-title">Why Join FEwB?</h3>
             <p className="alumni__benefits-sub">
-              Subscription-based membership open to Uganda PHFP alumni, residents,
+              Membership is open to Uganda PHFP alumni, residents,
               and affiliated public health professionals.
             </p>
-            <div className="alumni__fees">
-              <div className="alumni__fee-row">
-                <span>One-time registration</span>
-                <span>UgX 100,000</span>
-              </div>
-              <div className="alumni__fee-row">
-                <span>Annual subscription</span>
-                <span>UgX 100,000</span>
-              </div>
-            </div>
           </div>
           <ul className="alumni__benefits-list">
             {benefits.map((b, i) => (

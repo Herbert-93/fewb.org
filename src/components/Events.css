@@ -91,6 +91,14 @@
   font-weight: 500;
 }
 
+.event__meta-value {
+  color: #15803d;
+  background: rgba(21, 128, 61, 0.08);
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-weight: 600;
+}
+
 .event__title {
   font-family: 'Merriweather', Georgia, serif;
   font-size: 1rem;
